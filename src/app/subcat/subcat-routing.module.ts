@@ -4,18 +4,13 @@ import { SubcatComponent } from './subcat.component';
 import { ShowComponent } from './show/show.component';
 
 const routes: Routes = [ 
-  { path: '', redirectTo: '/subcat', pathMatch: 'full' },
- {
-  path: 'subcat',
-  component: SubcatComponent,
-  children: [
-    
-    {
-      path: 'subcat',
-      component: ShowComponent
-      }
-    ]
-  }];
+//  { path: '', redirectTo: '/subcat', pathMatch: 'full' },
+ {path: '',component: SubcatComponent,
+    children:[
+      {path: 'show',component: ShowComponent}
+  ]
+}
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
