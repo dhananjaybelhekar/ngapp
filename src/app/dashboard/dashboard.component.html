@@ -1,1 +1,18 @@
 <h3>Top Heroes</h3>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+  <input name="first" ngModel required #first="ngModel"><br>
+  <input name="last" ngModel required><br>
+  <select name="loca" ngModel required><br>
+      <option></option>
+    <option>sdfsdf1</option>
+    <option>sdfsdf2</option>
+    <option>sdfsdf3</option>
+    </select>
+  <button [disabled]="!f.valid">Submit</button>
+</form>
+
+<p>First name value: {{ first.value }}</p>
+<p>First name valid: {{ first.valid }}</p>
+<p>Form value: {{ f.value | json }}</p>
+<p>Form valid: {{ f.valid }}</p>
+

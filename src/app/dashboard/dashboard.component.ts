@@ -9,12 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
   //heroes: Hero[] = [];
-
+  hero:any;
   //constructor(private heroService: HeroService) { }
-  constructor() { }
+  constructor() {
+    this.hero= {};
+   }
 
   ngOnInit() {
-    //this.getHeroes();
+    this.hero= {};
+  }
+  show(data:any){
+    console.log(this.hero);
+    console.log(data);
+  }
+  onSubmit(data:any){
+    console.log(data);
   }
 
   // getHeroes(): void {
