@@ -1,17 +1,19 @@
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent }   from './dashboard/dashboard.component';
-import { NewcmpComponent } from './dashboard/newcmp/newcmp.component';
+
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent,
-      children:[
-                { path: 'newcmp', component: NewcmpComponent}
-              ] 
+  //{ path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  {
+    path: '',
+    redirectTo: '',
+    pathMatch: 'full'
   },
-  // { path: 'detail/:id', component: HeroDetailComponent },
-  // { path: 'heroes', component: HeroesComponent }
+  { path: 'dashboard', loadChildren: 'app/dashboard/dashboard.module#DashboardModule' },
+  { path: 'subcat', loadChildren: 'app/subcat/subcat.module#SubcatModule' },
+  { path: 'sub2', loadChildren: 'app/sub2/sub2.module#Sub2Module' },
+  
+  
 ];
 
 @NgModule({

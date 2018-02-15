@@ -9,8 +9,6 @@ import { InMemoryDataService }  from './in-memory-data.service';
 import { AppRoutingModule }     from './app-routing.module';
 
 import { AppComponent }         from './app.component';
-import { DashboardComponent }   from './dashboard/dashboard.component';
-import { NewcmpComponent } from './dashboard/newcmp/newcmp.component';
 
 
 @NgModule({
@@ -29,8 +27,6 @@ import { NewcmpComponent } from './dashboard/newcmp/newcmp.component';
   ],
   declarations: [
     AppComponent,
-    DashboardComponent,
-    NewcmpComponent,
   ],
   //providers: [ HeroService, MessageService ],
   bootstrap: [ AppComponent ]
