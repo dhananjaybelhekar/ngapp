@@ -1,5 +1,46 @@
-main App
-<button routerLink="/dashboard">dashboard</button>
-<button routerLink="/subcat">main</button>
-<button routerLink="/sub2">main</button>
-<router-outlet></router-outlet>
+<!-- main App
+<button routerLink="/dashboard" class="btn btn-danger">dashboard</button>
+<button routerLink="/subcat" class="btn btn-danger">main</button>
+<button routerLink="/sub2" class="btn btn-danger">main</button>
+<button routerLink="/subcat/show" class="btn btn-danger">subcat/sub2</button> -->
+
+
+
+<nav class="navbar navbar-dark bg-primary">
+        <a routerLink="/dashboard" class="navbar-brand">dashboard</a>
+        <a routerLink="/subcat" class="navbar-brand">subcat</a>
+        <a routerLink="/sub2" class="navbar-brand">sub2</a>
+        <a routerLink="/subcat/show" class="navbar-brand">show</a>
+        <button class="navbar-toggler" 
+        type="button" data-toggle="collapse" 
+        data-target="#navbarNavDropdown" 
+        aria-controls="navbarNavDropdown" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown link
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <router-outlet></router-outlet>

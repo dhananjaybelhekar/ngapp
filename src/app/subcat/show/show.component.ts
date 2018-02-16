@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./show.component.css']
 })
 export class ShowComponent implements OnInit {
-
+  dtOptions: DataTables.Settings = {};
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.dtOptions = {
+      pagingType: 'full_numbers'
+    };
   }
 
 }

@@ -6,7 +6,7 @@ const routes: Routes = [
   //{ path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   {
     path: '',
-    redirectTo: '',
+    redirectTo: '/dashboard',
     pathMatch: 'full'
   },
   { path: 'dashboard', loadChildren: 'app/dashboard/dashboard.module#DashboardModule' },

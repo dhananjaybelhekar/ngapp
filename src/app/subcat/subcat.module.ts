@@ -4,11 +4,12 @@ import { CommonModule } from '@angular/common';
 import { SubcatRoutingModule } from './subcat-routing.module';
 import { SubcatComponent } from './subcat.component';
 import { ShowComponent } from './show/show.component';
-
+import { DataTablesModule } from 'angular-datatables';
 @NgModule({
   imports: [
     CommonModule,
-    SubcatRoutingModule
+    SubcatRoutingModule,
+    DataTablesModule
   ],
   declarations: [SubcatComponent, ShowComponent]
 })

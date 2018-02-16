@@ -4,19 +4,25 @@ import { FormsModule }    from '@angular/forms';
 import { HttpClientModule }    from '@angular/common/http';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { InMemoryDataService }  from './in-memory-data.service';
 
 import { AppRoutingModule }     from './app-routing.module';
 
 import { AppComponent }         from './app.component';
+import { DataTablesModule } from 'angular-datatables';
 
 
 @NgModule({
   imports: [
+
+  NgbModule.forRoot(),
+ 
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    DataTablesModule,
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.

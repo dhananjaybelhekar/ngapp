@@ -1,14 +1,19 @@
 <h3>Top Heroes</h3>
 <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
-  <input name="first" ngModel required #first="ngModel"><br>
-  <input name="last" ngModel required><br>
-  <select name="loca" ngModel required><br>
-      <option></option>
-    <option>sdfsdf1</option>
-    <option>sdfsdf2</option>
-    <option>sdfsdf3</option>
-    </select>
-  <button [disabled]="!f.valid">Submit</button>
+  <div class="form-group col-6">
+      <label for="exampleInputEmail1">Email address</label>
+      <input name="first" ngModel required #first="ngModel" class="form-control"><br>
+      <label for="exampleInputEmail1">Email address</label>
+      <input name="last" ngModel required class="form-control"><br>
+      <label for="exampleInputEmail1">Email address</label>
+      <select name="loca" ngModel required class="form-control"><br>
+          <option></option>
+        <option>sdfsdf1</option>
+        <option>sdfsdf2</option>
+        <option>sdfsdf3</option>
+        </select>
+      <button [disabled]="!f.valid">Submit</button>
+  </div>
 </form>
 
 <p>First name value: {{ first.value }}</p>
@@ -16,3 +21,53 @@
 <p>Form value: {{ f.value | json }}</p>
 <p>Form valid: {{ f.valid }}</p>
 
+<div class="btn-group btn-group-toggle">
+  <label class="btn-primary" ngbButtonLabel>
+    <input type="checkbox" ngbButton [(ngModel)]="model.left"> Left (pre-checked)
+  </label>
+  <label class="btn-primary" ngbButtonLabel>
+    <input type="checkbox" ngbButton [(ngModel)]="model.middle"> Middle
+  </label>
+  <label class="btn-primary" ngbButtonLabel>
+    <input type="checkbox" ngbButton [(ngModel)]="model.right"> Right
+  </label>
+</div>
+<hr>
+<pre>{{model | json}}</pre>
+
+<ng-template #content let-c="close" let-d="dismiss">
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button> -->
+
+    <!-- <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          454564564564 d54 sd56f456sdf4 65sdf4
+        </div>
+      </div>
+    </div>
+    <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+      </div>  -->
+
+    <div class="modal-header">
+        <h4 class="modal-title">Modal title</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+      </div>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
+
+<hr>
+
+<pre>{{closeResult}}</pre>
